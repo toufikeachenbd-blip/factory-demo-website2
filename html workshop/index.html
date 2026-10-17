@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EA Chen Textile Corporation Ltd. manufactures woven and non-woven interlining products in Cumilla EPZ, Bangladesh.">
+  <title>EA Chen Textile Corporation Ltd.</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #176b87;
+      --teal: #21a6a1;
+      --light: #f3f7fa;
+      --ink: #243b53;
+      --muted: #627d98;
+      --white: #fff;
+      --border: #d9e2ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, #102a43, #176b87);
+      color: #fff;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      min-width: 0;
+    }
+
+    .company-logo {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+      background: transparent;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: .95rem;
+      transition: color .2s ease;
+    }
+
+    nav a:hover {
+      color: #8ee3df;
+    }
+
+    .hero {
+      max-width: 1120px;
+      margin: auto;
+      padding: 72px 22px 84px;
+    }
+
+    .eyebrow {
+      color: #8ee3df;
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.12;
+      margin: 12px 0 18px;
+      max-width: 780px;
+    }
+
+    .hero p {
+      max-width: 670px;
+      color: #e5eef5;
+      font-size: 1.08rem;
+    }
+
+    .button {
+      display: inline-block;
+      background: #8ee3df;
+      color: #102a43;
+      padding: 11px 18px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 14px;
+      transition: background .2s ease;
+    }
+
+    .button:hover {
+      background: #fff;
+    }
+
+    section {
+      padding: 62px 22px;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+
+    .section-head .eyebrow {
+      color: var(--blue);
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      line-height: 1.2;
+      margin: 8px 0 12px;
+      color: var(--navy);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(16, 42, 67, .05);
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 7px;
+      color: var(--navy);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .photo {
+      border-radius: 12px;
+      overflow: hidden;
+      background: #eaf1f5;
+      border: 1px solid var(--border);
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #eaf1f5;
+    }
+
+    .caption {
+      padding: 12px 14px;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .light {
+      background: var(--light);
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .product {
+      padding: 22px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--border);
+      transition: box-shadow .2s ease, transform .2s ease;
+    }
+
+    .product:hover {
+      box-shadow: 0 8px 22px rgba(16, 42, 67, .09);
+      transform: translateY(-2px);
+    }
+
+    .product span {
+      color: var(--teal);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .contact {
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .contact h2 {
+      color: #fff;
+    }
+
+    .contact .muted {
+      color: #d9e2ec;
+    }
+
+    footer {
+      padding: 20px 22px;
+      background: #0b1f33;
+      color: #cbd5e1;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        justify-content: center;
+      }
+
+      .brand {
+        justify-content: center;
+        text-align: left;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px 16px;
+      }
+
+      .cards,
+      .product-list {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero {
+        padding: 54px 22px 64px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand {
+        font-size: .95rem;
+        gap: 10px;
+      }
+
+      .company-logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      nav {
+        font-size: .9rem;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        height: 230px;
+      }
+
+      section {
+        padding: 46px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="home">
+    <div class="nav">
+
+      <!-- COMPANY LOGO -->
+      <div class="brand">
+        <img
+          src="images/company-logo.png"
+          alt="EA Chen Textile Corporation Ltd. Logo"
+          class="company-logo">
+        <div>EA Chen Textile Corporation Ltd.</div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#production">Production</a>
+        <a href="#quality">Quality</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div class="eyebrow">Textile Interlining Solutions</div>
+      <h1>Reliable Interlining for Better Garment Performance</h1>
+      <p>
+        EA Chen Textile Corporation Ltd. manufactures woven and
+        non-woven interlining products, with a focus on production
+        consistency and quality.
+      </p>
+      <a class="button" href="#products">Explore Our Products</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">About Us</div>
+        <h2>Textile manufacturing with a focus on quality</h2>
+        <p class="muted">
+          Located in Cumilla EPZ, Bangladesh, EA Chen Textile
+          Corporation Ltd. produces interlining materials for
+          garment applications.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-body">
+            <h3>Our Approach</h3>
+            <p class="muted">
+              Consistent processes, careful material handling,
+              and a commitment to dependable product quality.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>Our Workplace</h3>
+            <p class="muted">
+              Production and Quality teams work together to
+              support reliable manufacturing operations.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="light">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Our Products</div>
+        <h2>Interlining Products</h2>
+        <p class="muted">
+          Product information can be updated here as your range changes.
+        </p>
+      </div>
+
+      <div class="product-list">
+        <article class="product">
+          <span>01</span>
+          <h3>Woven Interlining</h3>
+          <p class="muted">
+            Interlining solutions designed for garment structure
+            and performance.
+          </p>
+        </article>
+
+        <article class="product">
+          <span>02</span>
+          <h3>Non-Woven Interlining</h3>
+          <p class="muted">
+            Non-woven interlining materials for a variety of
+            garment applications.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    PHOTO GUIDE:
+    1. Keep your photos in the "images" folder beside index.html.
+    2. Use the exact filenames shown below, or change the src.
+    3. Keep uppercase and lowercase letters consistent.
+  -->
+
+  <section id="production">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Department Gallery</div>
+        <h2>Production</h2>
+        <p class="muted">
+          Production lines, machinery, processes, and factory operations.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <article class="photo">
+          <img src="images/production-01.jpg" alt="Production floor photo" loading="lazy">
+          <div class="caption">Production Floor</div>
+        </article>
+
+        <article class="photo">
+          <img src="images/production-02.jpg" alt="Textile production machinery" loading="lazy">
+          <div class="caption">Production Machinery</div>
+        </article>
+
+        <article class="photo">
+          <img src="images/production-03.jpg" alt="Textile manufacturing process" loading="lazy">
+          <div class="caption">Manufacturing Process</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quality" class="light">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Department Gallery</div>
+        <h2>Quality</h2>
+        <p class="muted">
+          Inspection, testing, quality checks, and laboratory activities.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <article class="photo">
+          <img src="images/quality-01.jpg" alt="Quality inspection photo" loading="lazy">
+          <div class="caption">Quality Inspection</div>
+        </article>
+
+        <article class="photo">
+          <img src="images/quality-02.jpg" alt="Fabric testing process" loading="lazy">
+          <div class="caption">Fabric Testing</div>
+        </article>
+
+        <article class="photo">
+          <img src="images/quality-03.jpg" alt="Quality control activity" loading="lazy">
+          <div class="caption">Quality Control</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Contact</div>
+        <h2>EA Chen Textile Corporation Ltd.</h2>
+        <p class="muted">
+          Plot 33 &amp; 34, Cumilla EPZ, Cumilla, Bangladesh
+        </p>
+        <p class="muted">
+          Email and telephone details can be added here when available.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; <span id="year">2026</span>
+    EA Chen Textile Corporation Ltd. All rights reserved.
+  </footer>
+</body>
+</html>
